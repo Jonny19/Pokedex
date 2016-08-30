@@ -13,6 +13,8 @@ class Pokemon {
     private var _name: String!
     private var _pokedexId: Int!
     
+    var pokemon: Pokemon!
+    
     var name: String {
         return _name
     }
