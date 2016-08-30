@@ -126,6 +126,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="dOS-Bm-XGI" id="A1G-pb-07s"/>
+                        <outlet property="searchBar" destination="RE4-Fd-a3G" id="n15-R7-18p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
