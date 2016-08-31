@@ -10,14 +10,21 @@ import UIKit
 
 class PokemonDetailVC: UIViewController {
 
+    
+    @IBOutlet weak var pokemonNameLbl: UILabel!
+    
     var pokemon: Pokemon!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        
+        pokemonNameLbl.text = pokemon.name
     
+    }
+    
+    @IBAction func musicBtnPressed(_ sender: AnyObject) {
+        // TODO: MusicPlayerBtn
     }
 
 }
