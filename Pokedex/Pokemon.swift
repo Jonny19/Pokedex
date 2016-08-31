@@ -12,6 +12,13 @@ class Pokemon {
     
     private var _name: String!
     private var _pokedexId: Int!
+    private var _pokemonDescLbl: String!
+    private var _pokemonTypeLbl: String!
+    private var _defenseLbl: String!
+    private var _heightLbl: String!
+    private var _weightLbl: String!
+    private var _attackLbl: String!
+    private var _evolutionLbl: String!
     
     var pokemon: Pokemon!
     
