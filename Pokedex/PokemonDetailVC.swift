@@ -32,9 +32,40 @@ class PokemonDetailVC: UIViewController {
 
         
         pokemonNameLbl.text = pokemon.name.capitalized
+        
+        let img = UIImage(named: "\(pokemon.pokedexId)")
+        pokemonImg.image = img
+        currentEvoImg.image = img
+        
+        pokedexIDLbl.text = "\(pokemon.pokedexId)"
+        
+        
+        pokemon.downloadPokemonDetails {
+            
+            self.updateUI()
+        }
     
     }
     
+    func updateUI() {
+        
+        attackLbl.text = pokemon.attackLbl
+        defenseLbl.text = pokemon.defenseLbl
+        heightLbl.text = pokemon.heightLbl
+        weightLbl.text = pokemon.weightLbl
+        pokemonTypeLbl.text = pokemon.typeLbl
+        pokemonDescLbl.text = pokemon.descLbl
+        
+        if pokemon.nextEvolutionId == "" {
+            evolutionLbl.text = "No Evolution"
+            nextEvoImg.isHidden = true
+        } else {
+            nextEvoImg.isHidden = false
+            nextEvoImg.image = UIImage(named: pokemon.nextEvolutionId)
+            let str = "Next Evolution: \(pokemon.nextEvolutionName) - Lvl \(pokemon.nextEvolutionLevel)"
+            
+        }
+    }
     @IBAction func musicBtnPressed(_ sender: AnyObject) {
         // TODO: MusicPlayerBtn
     }
